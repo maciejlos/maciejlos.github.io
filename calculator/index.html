@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+/>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../default.css"/>
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    <title>Javascript Calculator</title>
+</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q70QWRX28V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q70QWRX28V');
+</script>
+<body>
+<div class="main-container">
+        <div class="greeting-wrapper">
+        <h1>Calculator</h1>
+        <div id="theme-options-wrapper">
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                    </div>
+            </div>
+        <div class="intro-wrapper">
+        <div class="nav-wrapper">
+            <div class ="dots-wrapper">
+                <div id="dot1" class="browser-dot"></div>
+                <div id="dot2" class="browser-dot"></div>
+                <div id="dot3" class="browser-dot"></div>   
+            </div>
+            <ul id ="navigation">
+                <li><a href="../index.html">Main Page</a></li>
+            </ul>
+        </div>
+        <div class="left-column">
+    <div class="calculator">
+        <div class="display">
+            <div class="previousNumber">
+                <p></p>
+                <span class="mathSign"></span>
+            </div>
+            <p class="currentNumber"></p>
+        </div>
+   
+    <div class="panel">
+        <button class="clear">C</button>
+        <button class="operator">2^</button>
+        <button class="operator">:</button>
+        <button class="operator">x</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">-</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">+</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="equals">=</button>
+        <button class="number">0</button>
+        <button class="number">00</button>
+        <button class="number">.</button>
+    </div>
+</div>
+</div>
+ <div class="right-column">
+    <div data-simplebar class="calculator-history">
+        <p class="history-title">Last Calculations <button class="history-btn">Clear History</button> </p>
+        <hr>
+
+        <ul class="history">
+            
+        </ul>
+    </div>
+    </div>
+</div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
+</body>
+</html>
