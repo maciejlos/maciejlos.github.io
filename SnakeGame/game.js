@@ -9,7 +9,7 @@ const gameBoard = document.getElementById('game-board')
 function main(currentTime) {
   if (gameOver) {
     if (confirm('You lost. \n Your score= '+score+'\n Press ok to restart.')) {
-      window.location = '/maciejlos/SnakeGame/snake.html'
+      window.location = '/'
     }
     return
   }
