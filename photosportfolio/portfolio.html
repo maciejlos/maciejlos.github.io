@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,8 +34,7 @@
   transition: opacity 4s ease-in-out;
 }
 
- #slider img.active,
-#slider img:first-child {
+#slider img.active {
   opacity: 1;
 }
   #spotify {
@@ -42,7 +42,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin: 5px;
+  margin: 10px;
 }
  #spotify-iframe {
     opacity: 0.4;
@@ -51,40 +51,32 @@
 
   </head>
   <body>
-    <h1>Spotify API Example</h1>
-    <button onclick="playMusic()">Play Music</button>
-    <button onclick="stopMusic()">Stop Music</button>
-    
     <div id="slider">
     </div>
     <div id="spotify">
     <iframe id="spotify-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6j71x3Jcep9iPA9x9AkcLS?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
     <script>
-       var slider = document.getElementById("slider");
-  var imageDirectory = " "; // replace with your image directory path
-  var imageCount = 9; // replace with the number of images you have
-  var images = "";
+      var slider = document.getElementById("slider");
+var imageDirectory = ""; // replace with your image directory path
+var imageCount = 17; // replace with the number of images you have
+var images = "";
 
-  for (var i = 1; i <= imageCount; i++) {
-    images += "<img src='" + imageDirectory + "image" + i + ".jpg' />";
-  }
+for (var i = 1; i <= imageCount; i++) {
+  images += "<img src='" + imageDirectory + "image" + i + ".jpg' class='" + (i === 1 ? "active" : "") + "'/>";
+}
 
-  slider.innerHTML = images;
-      var slideIndex = 0;
-      var slides = document.getElementsByTagName("img");
-      setInterval(function() {
-        slideIndex++;
-        if (slideIndex >= slides.length) {
-          slideIndex = 0;
-        }
-        for (var i = 0; i < slides.length; i++) {
-          slides[i].classList.remove("active");
-        }
-        slides[slideIndex].classList.add("active");
-      }, 7000); /* 7 seconds */
+slider.innerHTML = images;
+
+var activeImage = 1;
+var allImages = slider.getElementsByTagName("img");
+setInterval(function() {
+  var nextImage = activeImage === imageCount ? 1 : activeImage + 1;
+  allImages[activeImage - 1].classList.remove("active");
+  allImages[nextImage - 1].classList.add("active");
+  activeImage = nextImage;
+}, 8000);
 
     </script>
   </body>
 </html>
-
