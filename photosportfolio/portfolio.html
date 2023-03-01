@@ -10,31 +10,46 @@
   }
 
   #slider {
-  position: relative;
-  height: 0;
-  padding-bottom: 177.78%; /* 9:16 aspect ratio */
-  background-color: black;
-}
-
- #slider img {
-  position: absolute;
+   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+ #slider img {
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
   opacity: 0;
   transition: opacity 4s ease-in-out;
-  object-fit: cover;
-  object-position: center 40%; /* Center vertically */
 }
 
   #slider img.active {
     opacity: 1;
   }
+  #spotify {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
 </style>
 
   </head>
   <body>
+    <h1>Spotify API Example</h1>
+    <button onclick="playMusic()">Play Music</button>
+    <button onclick="stopMusic()">Stop Music</button>
+    
     <div id="slider">
       <img src="image1.jpg" class="active">
       <img src="image2.jpg">
@@ -46,6 +61,9 @@
       <img src="image8.jpg">
       <img src="image9.jpg">
     </div>
+    <div id="spotify">
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6j71x3Jcep9iPA9x9AkcLS?utm_source=generator&theme=0" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
     <script>
       var slideIndex = 0;
       var slides = document.getElementsByTagName("img");
@@ -59,6 +77,8 @@
         }
         slides[slideIndex].classList.add("active");
       }, 7000); /* 7 seconds */
+
     </script>
   </body>
 </html>
+
