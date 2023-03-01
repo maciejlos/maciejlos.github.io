@@ -33,15 +33,19 @@
   transition: opacity 4s ease-in-out;
 }
 
-  #slider img.active {
-    opacity: 1;
-  }
+ #slider img.active,
+#slider img:first-child {
+  opacity: 1;
+}
   #spotify {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 20px;
 }
+ #spotify-iframe {
+    opacity: 0.4;
+  }
 </style>
 
   </head>
@@ -51,20 +55,21 @@
     <button onclick="stopMusic()">Stop Music</button>
     
     <div id="slider">
-      <img src="image1.jpg" class="active">
-      <img src="image2.jpg">
-      <img src="image3.jpg">
-      <img src="image4.jpg">
-      <img src="image5.jpg">
-      <img src="image6.jpg">
-      <img src="image7.jpg">
-      <img src="image8.jpg">
-      <img src="image9.jpg">
     </div>
     <div id="spotify">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6j71x3Jcep9iPA9x9AkcLS?utm_source=generator&theme=0" width="300" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe id="spotify-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6j71x3Jcep9iPA9x9AkcLS?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
     <script>
+       var slider = document.getElementById("slider");
+  var imageDirectory = " "; // replace with your image directory path
+  var imageCount = 9; // replace with the number of images you have
+  var images = "";
+
+  for (var i = 1; i <= imageCount; i++) {
+    images += "<img src='" + imageDirectory + "image" + i + ".jpg' />";
+  }
+
+  slider.innerHTML = images;
       var slideIndex = 0;
       var slides = document.getElementsByTagName("img");
       setInterval(function() {
