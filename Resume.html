@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maciej Łoś - Resume</title>
+    <style>
+        body {
+            font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #1E1E1E; /* Black background */
+            color: #DDD; /* White text */
+            line-height: 1.2;
+            font-size: 12px; 
+            -webkit-print-color-adjust: exact; /* Adjust for WebKit browsers */
+        }
+
+        .resume-container {
+            width: 21cm;
+            margin: 0.5cm auto;
+            padding: 0.5cm;
+            background: #000; /* Black background */
+            box-sizing: border-box;
+            page-break-inside: avoid;
+        }
+
+        .top-box {
+            background: #333; /* Dark grey background */
+            box-sizing: border-box;
+            padding: 0.8em;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Red shadow */
+            text-align: center;
+        }
+
+        .two-columns {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-top: 2em;
+            border-radius: 5px;
+        }
+
+        .left-column {
+            width: 28%;
+            background: #333; /* Dark grey background */
+            box-sizing: border-box;
+            padding: 0.8em;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Red shadow */
+        }
+
+        .right-column {
+            width: 69%;
+            background: #333; /* Dark grey background */
+            box-sizing: border-box;
+            padding: 0.8em;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /* Red shadow */
+        }
+
+        h2 {
+            color: #DDD;
+            border-bottom: 2px solid #CC0000; /* Red border */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            margin-top: 2px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Square red bullet points with rectangular corners */
+        li {
+    margin-bottom: 4px;
+    font-size: 1em;
+    text-align: left;
+    position: relative;
+    padding-left: 12px;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #CC0000; /* Red color */
+    left: 2px;
+    top: 6px; /* Adjusted to be at the top of the li element */
+}
+
+        a {
+    color: #FFF; /* White text color for links */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+a:hover {
+    color: #CC0000; /* Red text color on hover */
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+
+        .top-box header h1,
+        .top-box header p {
+            margin: 0;
+        }
+
+        .top-box section {
+            margin-top: 1em;
+        }
+
+        .top-box hr {
+            border: 0.5px solid #CC0000; /* Red line */
+            margin: 10px 0;
+        }
+
+        @media print {
+    body {
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact; /* Adjust for WebKit browsers */
+    }
+
+    .resume-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Preserve background color and adjust text color for printing */
+    body, h1, p, li {
+        color: #DDD !important;
+        background: #1E1E1E !important;
+    }
+
+    /* Preserve custom bullet points for printing */
+    li::before {
+        content: '\2022'; /* Unicode character for a bullet point */
+        color: #CC0000; /* Match the color of your original bullet points */
+        margin-right: 5px;
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container" id="pdf-content">
+
+        <div class="top-box">
+            <header>
+                <h1>Maciej Łoś</h1>
+                <p class="accent-line">Technical Business Analyst</p>
+            </header>
+            <hr>
+            <p>
+                I am a professional with a background in Architecture, having worked as an Architect for three years. The
+                challenges I faced in architecture have seamlessly translated into my current role in the IT industry,
+                where I continue to thrive in client-facing positions.
+                My passion lies in building strong relationships with clients and collaborating to achieve the
+                best results. I bring a unique blend of architectural insight and IT expertise to every client
+                engagement, ensuring a holistic and effective approach to problem-solving.
+            </p>
+        </div>
+     <section>
+        <div class="two-columns">
+        <div class="left-column">
+            <!-- Add content for the left column (Skills, Interests, Languages, Links) -->
+            <h2>Skills</h2>
+            <h3>Archi & Design</h3>
+            <ul>
+                <li>Archicad</li>
+                <li>Autocad</li>
+                <li>Revit</li>
+                <li>Sketchup</li>
+                <li>Photoshop</li>
+                <li>InDesign</li>
+                <li>Illustrator</li>
+            </ul>
+
+            <h3>Technical</h3>
+            <ul>
+                <li>SQL</li>
+                <li>Java (Maven/Spring)</li>
+                <li>JavaScript (React)</li>
+                <li>XML</li>
+                <li>XSLT</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Jenkins</li>
+                <li>VBA</li>
+                <li>Jira</li>
+            </ul>
+                <h2>Languages</h2>
+            <ul>
+                <li>English (C1+)</li> 
+                <li>German (A2)</li>
+            </ul>
+            <h2>Interests</h2>
+            <ul>
+                <li>Mountaineering</li>
+                <li>Rock Climbing</li>
+                <li>Photography</li>
+                <li>Architecture</li>
+                <li>Psychology</li>
+                <li>Sustainability</li>
+                <li>Swimming</li>
+                <li>Cycling</li>
+                <li>Piano</li>
+                <li>Astronomy</li>
+            </ul>
+
+            
+            <h2>Links</h2>
+            <ul>
+                <li><a href="https://instagram.com">Website</a></li>
+                <li><a href="https://github.com">GitHub</a></li>
+                <li><a href="https://linkedin.com">LinkedIn</a></li>
+                <li><a href="https://issuu.com">Issuu</a></li>
+                <li><a href="https://instagram.com">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="right-column">
+            <!-- Add content for the right column (Professional Summary and Experience) -->
+            
+
+            <!-- Add content for the right column (Experience) -->
+            <h2>Experience</h2>
+
+        <h3>Technical BA | Acturis <br> Wrocław | 02/2022 - Present</h3>
+        <ul>
+            <li>Acted as a Product Owner, managing 11 products for various business stakeholders.</li>
+            <li>Led projects from scoping and product order sign-off to deployment and post go-live support.</li>
+            <li>Elicited, analyzed, specified, and validated the business needs of stakeholders.</li>
+            <li>Translated conceptual requirements into clear functional specifications in line with company standards.</li>
+            <li>Provided test data and supported the testing process in collaboration with developers and testers.</li>
+            <li>Provided production support, including troubleshooting, root cause analysis, and resolution.</li>
+            <li>Facilitated weekly meetings with clients to gather feedback, document requirements, and explore solutions.</li>
+            <li>Collaborated closely with the web applications development team to implement and maintain web-based systems.</li>
+            <li>Created complex SQL queries and scripts, managed C++ REST web services, and XML mappings.</li>
+            <li>Reviewed code, specifications, and test packs of other colleagues and mentored new joiners.</li>
+        </ul>
+
+        <h3>Architect | Orbit Architects <br> London | 10/2019 - 10/2021</h3>
+        <ul>
+            <li>Led tender and construction stage projects of commercial buildings: 86 King William Street Rooftop Bar extension and office Cat. A fit out, The Pickle Factory Cat. A fitout.</li>
+            <li>Delivered full documentation for tender and construction stage projects.</li>
+            <li>Full coordination of the project, direct contact with clients, consultants, and project managers.</li>
+            <li>Resolved construction site issues, signed off main contractor works, reviewed and signed off subcontractors technical documentation.</li>
+            <li>Dealt with complex existing scope.</li>
+            <li>Created office Revit template.</li>
+        </ul>
+
+        <h3>Architect | TFK <br> Poznań | 09/2018 - 09/2019</h3>
+        <ul>
+            <li>Led building permit stage for large-scale warehouse and office buildings.</li>
+            <li>Full coordination, direct contact with clients, consultants, and project managers.</li>
+            <li>Resolved construction site issues.</li>
+        </ul>
+        <h2>Education</h2>
+
+        <h3>Poznań University of Technology<br> Architecture | Bachelor and Master degree</h3>
+    
+        </div>
+    </div>
+
+</section>
+ </div>
+</body>
+</html>
+
+
